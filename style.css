@@ -56,14 +56,34 @@ header {
 
 #scorecard {
     margin-top: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 #scorecard h2 {
     color: #3498db;
+    margin-bottom: 10px;
 }
 
-#scorecard p {
+#scorecard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#scorecard th, #scorecard td {
+    border: 1px solid #2c3e50;
+    padding: 8px;
     font-size: 1rem;
-    margin: 5px 0;
+}
+
+#scorecard th {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#scorecard td {
+    background-color: #f4f4f9;
+}
+
+#scorecard td, #scorecard th {
+    text-align: center;
 }
