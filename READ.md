@@ -31,7 +31,7 @@ Yatzy is a classic dice game where players roll dice to achieve specific combina
 ## Layout and User Flow
 The game layout is simple, with a central game board showing dice at the top and the scorecard below. Users can roll dice by clicking the "Roll Dice" button. Scores update in the scorecard based on their combinations.
 
-![Screenshot 2024-10-28 232839](https://github.com/user-attachments/assets/29c50a5c-411f-4cda-b09a-f790fe584bce)
+![Screenshot 2024-10-29 173750](https://github.com/user-attachments/assets/add7fa5c-e1ad-4cd1-979a-d9591e48fd6d)
 
 
 ## Interactions and Animations
