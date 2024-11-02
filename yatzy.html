@@ -1,120 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yatzy Game Mock-up</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yatzy Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Yatzy Game</h1>
-    </header>
-    <main>
-        <section id="game-board">
-            <div id="dice-container">
-                <div class="dice" id="die1">⚀</div>
-                <div class="dice" id="die2">⚁</div>
-                <div class="dice" id="die3">⚂</div>
-                <div class="dice" id="die4">⚃</div>
-                <div class="dice" id="die5">⚄</div>
-            </div>
-            <button id="roll-button">Roll Dice</button>
-            <div id="scorecard">
-                <h2>Scorecard</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Your Score</th>
-                            <th>Opponent Score</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Ones</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Twos</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Threes</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Fours</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Fives</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Sixes</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Sum</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Bonus</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Three of a kind</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Four of a kind</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Full House</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Small straight</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Large straight</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Chance</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>YAHTZEE</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Total Score</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
+  <header>
+    <h1>Yatzy Game</h1>
+  </header>
+
+  <div id="game-container">
+    <!-- Game Board for Dice -->
+    <div id="game-board">
+      <div id="dice-container">
+        <!-- Dice will be dynamically added here by JavaScript -->
+      </div>
+      <button id="roll-btn">Roll Dice</button>
+      <button id="end-turn-btn">End Turn</button>
+    </div>
+
+    <!-- Scorecard -->
+    <div id="scorecard">
+      <h2>Scorecard</h2>
+      <table>
+        <tr><td>Ones</td><td id="ones-score" onclick="selectScore('ones', 'ones-score')"></td></tr>
+        <tr><td>Twos</td><td id="twos-score" onclick="selectScore('twos', 'twos-score')"></td></tr>
+        <tr><td>Threes</td><td id="threes-score" onclick="selectScore('threes', 'threes-score')"></td></tr>
+        <tr><td>Fours</td><td id="fours-score" onclick="selectScore('fours', 'fours-score')"></td></tr>
+        <tr><td>Fives</td><td id="fives-score" onclick="selectScore('fives', 'fives-score')"></td></tr>
+        <tr><td>Sixes</td><td id="sixes-score" onclick="selectScore('sixes', 'sixes-score')"></td></tr>
+        <tr><td>Sum</td><td id="sum-score"></td></tr>
+        <tr><td>Bonus</td><td id="bonus-score"></td></tr>
+        <tr><td>Three of a Kind</td><td id="three-of-a-kind-score" onclick="selectScore('three-of-a-kind', 'three-of-a-kind-score')"></td></tr>
+        <tr><td>Four of a Kind</td><td id="four-of-a-kind-score" onclick="selectScore('four-of-a-kind', 'four-of-a-kind-score')"></td></tr>
+        <tr><td>Full House</td><td id="full-house-score" onclick="selectScore('full-house', 'full-house-score')"></td></tr>
+        <tr><td>Small Straight</td><td id="small-straight-score" onclick="selectScore('small-straight', 'small-straight-score')"></td></tr>
+        <tr><td>Large Straight</td><td id="large-straight-score" onclick="selectScore('large-straight', 'large-straight-score')"></td></tr>
+        <tr><td>Chance</td><td id="chance-score" onclick="selectScore('chance', 'chance-score')"></td></tr>
+        <tr><td>YAHTZEE</td><td id="yatzy-score" onclick="selectScore('yatzy', 'yatzy-score')"></td></tr>
+        <tr><td>Total Score</td><td id="total-score"></td></tr>
+    </div>
+
+  <script src="game.js"></script>
 </body>
 </html>
