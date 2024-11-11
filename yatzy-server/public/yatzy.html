@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yatzy Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Welcome Screen Overlay -->
+  <div id="welcome-screen">
+    <h2>Welcome to Yatzy!</h2>
+    <p>Get ready to roll the dice and score big!</p>
+    <button id="start-game-btn">Start Game</button>
+  </div>
+  
+  <header>
+    <h1>Yatzy Game</h1>
+  </header>
+
+  <div id="game-container">
+    <!-- Game Board for Dice -->
+    <div id="game-board">
+      <div id="dice-container">
+        <!-- Dice will be dynamically added here by JavaScript -->
+      </div>
+      <button id="roll-btn">Roll Dice</button>
+      <button id="end-turn-btn">End Turn</button>
+    </div>
+
+    <!-- Scorecard -->
+    <div id="scorecard">
+      <h2>Scorecard</h2>
+      <table>
+        <tr><td>Ones</td><td id="ones-score" data-category="ones"></td></tr>
+        <tr><td>Twos</td><td id="twos-score" data-category="twos"></td></tr>
+        <tr><td>Threes</td><td id="threes-score" data-category="threes"></td></tr>
+        <tr><td>Fours</td><td id="fours-score" data-category="fours"></td></tr>
+        <tr><td>Fives</td><td id="fives-score" data-category="fives"></td></tr>
+        <tr><td>Sixes</td><td id="sixes-score" data-category="sixes"></td></tr>
+        <tr><td>Sum</td><td id="sum-score"></td></tr>
+        <tr><td>Bonus</td><td id="bonus-score"></td></tr>
+        <tr><td>Three of a Kind</td><td id="three-of-a-kind-score" data-category="three-of-a-kind"></td></tr>
+        <tr><td>Four of a Kind</td><td id="four-of-a-kind-score" data-category="four-of-a-kind"></td></tr>
+        <tr><td>Full House</td><td id="full-house-score" data-category="full-house"></td></tr>
+        <tr><td>Small Straight</td><td id="small-straight-score" data-category="small-straight"></td></tr>
+        <tr><td>Large Straight</td><td id="large-straight-score" data-category="large-straight"></td></tr>
+        <tr><td>Chance</td><td id="chance-score" data-category="chance"></td></tr>
+        <tr><td>YAHTZEE</td><td id="yatzy-score" data-category="yatzy"></td></tr>
+        <tr><td>Total Score</td><td id="total-score"></td></tr>
+    </div>
+
+    <script type="module" src="YatzyGame.js"></script>
+</body>
+</html>
