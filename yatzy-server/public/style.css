@@ -84,14 +84,29 @@ header {
 .die {
     width: 80px;
     height: 80px;
-    background-size: cover;
+    font-size: 48px; /* Make the Unicode character large */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     border-radius: 8px;
     border: 2px solid #2c3e50;
 }
 
+/* Animation effect for rolling */
+.die.rolling {
+    animation: shake 0.1s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(1px, 1px) rotate(0deg); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(-1px, -1px) rotate(-2deg); }
+    20%, 40%, 60%, 80% { transform: translate(1px, -1px) rotate(2deg); }
+}
+
 .die.held {
     border-color: #f39c12;
+    background-color: #fafad2;
 }
 
 button {

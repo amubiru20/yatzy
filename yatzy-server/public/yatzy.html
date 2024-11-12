@@ -24,7 +24,7 @@
       <div id="dice-container">
         <!-- Dice will be dynamically added here by JavaScript -->
       </div>
-      <button id="roll-btn">Roll Dice</button>
+      <button id="animate-roll-btn">Roll Dice</button>
       <button id="end-turn-btn">End Turn</button>
     </div>
 
@@ -48,8 +48,12 @@
         <tr><td>Chance</td><td id="chance-score" data-category="chance"></td></tr>
         <tr><td>YAHTZEE</td><td id="yatzy-score" data-category="yatzy"></td></tr>
         <tr><td>Total Score</td><td id="total-score"></td></tr>
-    </div>
+      </table>
+    </div> <!-- Close #scorecard -->
+  </div> <!-- Close #game-container -->
 
-    <script type="module" src="YatzyGame.js"></script>
+  <!-- Load jQuery first, then your custom JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="module" src="YatzyGame.js"></script>
 </body>
 </html>
